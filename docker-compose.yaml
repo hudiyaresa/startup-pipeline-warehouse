@@ -29,7 +29,7 @@ services:
     volumes:
       - ./source_data/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - 5433:5432 
+      - 5452:5432 
     networks:
       - my_network
 
@@ -46,7 +46,7 @@ services:
       - ./target_db/init.sql:/docker-entrypoint-initdb.d/01-init.sql
       - ./target_db/etl_log.sql:/docker-entrypoint-initdb.d/02-etl_log.sql
     ports:
-      - 5435:5432 
+      - 5455:5432 
     networks:
       - my_network
   
