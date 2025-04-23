@@ -101,7 +101,7 @@ CREATE TABLE public.ipos (
 
 -- Staging table for people data
 CREATE TABLE public.people (
-    people_id integer NOT NULL,
+    people_id character varying(255) NOT NULL,
     object_id character varying(255),
     first_name character varying(255),
     last_name character varying(255),
@@ -113,16 +113,16 @@ CREATE TABLE public.people (
 
 -- Staging table for relationships data
 CREATE TABLE public.relationships (
-    relationship_id integer NOT NULL,
+    relationship_id character varying(255) NOT NULL,
     person_object_id character varying(255),
     relationship_object_id character varying(255),
-    start_at timestamp without time zone,
-    end_at timestamp without time zone,
-    is_past boolean,
-    sequence integer,
+    start_at character varying(255),
+    end_at character varying(255),
+    is_past character varying(255),
+    sequence character varying(255),
     title character varying(255),
-    created_at timestamp without time zone,
-    updated_at timestamp without time zone
+    created_at character varying(255),
+    updated_at character varying(255)
 );
 
 

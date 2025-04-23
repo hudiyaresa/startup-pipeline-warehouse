@@ -14,6 +14,23 @@ def logging_process(log_file="script/log/info.log"):
     logger = logging.getLogger()
     return logger
 
+def load_log_msg(spark: SparkSession, log_msg):
+
+    DB_URL = "jdbc:postgresql://pipeline_db:5432/etl_log"
+    table_name = "etl_log"
+
+    # set config
+    connection_properties = {
+        "user":"postgres",
+        "password":"cobapassword",
+        "driver": "org.postgresql.Driver"
+    }
+
+    log_msg.write.jdbc(url = DB_URL,
+                  table = table_name,
+                  mode = "append",
+                  properties = connection_properties)
+
 
 def init_spark_session():
     spark = SparkSession.builder.appName(

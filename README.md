@@ -132,9 +132,7 @@ Tools used for ETL implementation:
 
 ## Scheduling
 (Optional) Future improvements can include scheduling with:
-- **Apache Airflow**
 - **Cron Jobs**
-- **Prefect**
 
 ---
 
@@ -217,14 +215,6 @@ Tools used for ETL implementation:
 
 ---
 
----
-
-# Final Notes
-This project demonstrates a **professional real-world ETL pipeline** that integrates **structured**, **semi-structured**, and **API data sources** into a **unified data warehouse** for analytical insights.
-
-Designed for **scalability**, **extensibility**, and **reliability**, this pipeline showcases core skills required in modern **Data Engineering**.
-
----
 
 # Documentations
 

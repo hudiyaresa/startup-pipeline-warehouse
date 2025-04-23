@@ -1,68 +1,67 @@
-from helper.utils import logging_process
-from helper.utils import init_spark_session
+from utils.helper import logging_process, init_spark_session, load_log_msg
+from datetime import datetime
 import logging
 import pyspark
 
 logging_process()
 
 
-def extract_data(
-    data_name: str, format_data: str
-) -> pyspark.sql.DataFrame:
-    """
-    Function to extract movie data in csv or database table
-
-    Parameters
-    ----------
-    data_name (str): name of data or table of data sources
-    format_data (str): format data of data sources, currently on csv or db
-
-    Returns
-    -------
-    df (pyspark.sql.DataFrame): dataframe of data sources
-    """
-    # create spark session
+def extract_data(data_name: str, format_data: str) -> pyspark.sql.DataFrame:
     spark = init_spark_session()
 
-    # set variable for database
     DB_URL = "jdbc:postgresql://source_db:5432/startup_investments"
     DB_USER = "postgres"
     DB_PASS = "cobapassword"
 
-    # set config
     jdbc_url = DB_URL
     connection_properties = {
         "user": DB_USER,
         "password": DB_PASS,
-        "driver": "org.postgresql.Driver" # set driver postgres
+        "driver": "org.postgresql.Driver"
     }
 
-    try:
-        if format_data.lower() == "csv":
-            logging.info(f"===== Start Extracting {data_name} data =====")
+    current_timestamp = datetime.now()
+    log_message = None
 
+    try:
+        logging.info(f"===== Start Extracting {data_name} data =====")
+
+        if format_data.lower() == "csv":
             df = spark.read.csv(f"data/{data_name}.csv", header=True)
 
-            logging.info(f"===== Finish Extracting {data_name} data =====")
-
-            return df
-
         elif format_data.lower() == "db":
-            logging.info(f"===== Start Extracting {data_name} data =====")
-
             df = spark.read.jdbc(
-                url=jdbc_url, table=data_name, properties=connection_properties
+                url=jdbc_url,
+                table=data_name,
+                properties=connection_properties
             )
 
-            logging.info(f"===== Finish Extracting {data_name} data =====")
-
-            return df
-
         else:
-            raise Exception("Format data not supported yet")
+            raise ValueError("Format data not supported yet")
+
+        logging.info(f"===== Finish Extracting {data_name} data =====")
+
+        # Log success
+        log_message = spark.sparkContext.parallelize([(
+            "sources", "extract", "success", format_data, data_name, current_timestamp
+        )]).toDF(["step", "process", "status", "source", "table_name", "etl_date"])
+
+        return df
 
     except Exception as e:
         logging.error("====== Failed to Extract Data ======")
-        logging.error(e)
+        logging.error(str(e))
 
-        raise Exception(e)
+        # Log failure
+        log_message = spark.sparkContext.parallelize([(
+            "sources", "extraction", "failed", format_data, data_name, current_timestamp, str(e)
+        )]).toDF(["step", "process", "status", "source", "table_name", "etl_date", "error_msg"])
+
+        raise
+
+    finally:
+        if log_message:
+            try:
+                load_log_msg(spark, log_message)
+            except Exception as log_err:
+                logging.error(f"Failed to write log to DB: {log_err}")

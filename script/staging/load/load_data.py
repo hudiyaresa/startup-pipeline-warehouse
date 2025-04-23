@@ -1,61 +1,76 @@
-from helper.utils import logging_process
+from utils.helper import logging_process, init_spark_session, load_log_msg
 import logging
 import pyspark
+from sqlalchemy import create_engine, text
+from datetime import datetime
 
 logging_process()
 
 
 def load_data(df_result: pyspark.sql.DataFrame, table_name: str) -> None:
     """
-    Function that used to dump the result to the database using PySpark
-    and maintains data integrity by truncating the table before loading new data.
-
-    Parameters
-    ----------
-    df_result (pyspark.sql.DataFrame): final result of pyspark movie dataframe
-    table_name (str): The target table name in the database where data needs to be loaded.
+    Function to truncate a table using SQLAlchemy and then load data into it using PySpark,
+    while logging success/failure ETL events into a log table.
     """
+    spark = init_spark_session()
+    current_timestamp = datetime.now()
+    log_message = None
+
+    # DB config
+    DB_HOST = "pipeline_db"
+    DB_PORT = "5432"
+    DB_NAME = "staging"
+    DB_USER = "postgres"
+    DB_PASS = "cobapassword"
+
+    jdbc_url = f"jdbc:postgresql://{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    sqlalchemy_url = f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+    connection_properties = {
+        "user": DB_USER,
+        "password": DB_PASS,
+        "driver": "org.postgresql.Driver"
+    }
+
     try:
-        # set variable for database
-        DB_URL = "jdbc:postgresql://data_warehouse:5432/data_warehouse"
-        DB_USER = "postgres"
-        DB_PASS = "cobapassword"
-
-        # set config
-        jdbc_url = DB_URL
-        connection_properties = {
-            "user": DB_USER,
-            "password": DB_PASS,
-            "driver": "org.postgresql.Driver" # set driver postgres
-        }
-
         logging.info("===== Start Load data to the database =====")
 
-        # Truncate the target table (ensure data integrity by removing old records before loading new data)
-        truncate_sql = f"TRUNCATE TABLE {table_name} CASCADE"
+        # TRUNCATE TABLE using SQLAlchemy
+        engine = create_engine(sqlalchemy_url)
+        with engine.connect() as connection:
+            connection.execute(text(f"TRUNCATE TABLE {table_name} CASCADE"))
+            logging.info(f"===== Truncated table {table_name} successfully =====")
 
-        # Use the jdbc connection to execute the SQL truncate statement
-        truncate_df = pyspark.sql.SparkSession.builder.getOrCreate().read \
-            .format("jdbc") \
-            .option("url", jdbc_url) \
-            .option("dbtable", f"({truncate_sql}) AS trunc_query") \
-            .option("user", DB_USER) \
-            .option("password", DB_PASS) \
-            .load()
-
-        logging.info(f"===== Truncated table {table_name} successfully =====")                
-
-        # load data
+        # Load data using PySpark
         df_result.write.jdbc(
             url=jdbc_url,
             table=table_name,
-            mode="append",   # Use append to add data to the table without deleting existing data
+            mode="append",
             properties=connection_properties,
         )
 
         logging.info("===== Finish Load data to the database =====")
 
+        # SUCCESS log
+        log_message = spark.sparkContext.parallelize([(
+            "targets", "load", "success", "db", table_name, current_timestamp
+        )]).toDF(["step", "process", "status", "source", "table_name", "etl_date"])
+
     except Exception as e:
         logging.error("===== Failed Load data to the database =====")
-        logging.error(e)
-        raise Exception(e)
+        logging.error(str(e))
+
+        # FAILURE log
+        log_message = spark.sparkContext.parallelize([(
+            "targets", "load", "failed", "db", table_name, current_timestamp, str(e)
+        )]).toDF(["step", "process", "status", "source", "table_name", "etl_date", "error_msg"])
+
+        raise
+
+    finally:
+        if log_message is not None:
+            try:
+                load_log_msg(spark, log_message)
+                logging.info("ETL log inserted successfully")
+            except Exception as log_err:
+                logging.error(f"Failed to write log to DB: {log_err}")
