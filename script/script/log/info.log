@@ -2360,3 +2360,334 @@ Caused by: java.net.UnknownHostException: etl_log
 2025-04-23 19:38:21,488 - INFO - ===== Truncated table ipos successfully =====
 2025-04-23 19:38:21,638 - INFO - ===== Finish Load data to the database =====
 2025-04-23 19:38:22,271 - INFO - ETL log inserted successfully
+2025-04-23 19:57:30,401 - INFO - ===== Start Extracting people data =====
+2025-04-23 19:57:30,603 - INFO - ===== Finish Extracting people data =====
+2025-04-23 19:57:46,407 - INFO - ===== Start Extracting people data =====
+2025-04-23 19:57:46,605 - INFO - ===== Finish Extracting people data =====
+2025-04-23 19:58:40,640 - INFO - ===== Start Extracting people data =====
+2025-04-23 19:58:40,817 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:01:46,058 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:01:46,209 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:02:37,378 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:02:37,526 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:05:43,097 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:05:43,253 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:07:12,569 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:07:12,738 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:07:34,270 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:07:34,400 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:18:31,207 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:18:31,382 - INFO - ===== Finish Extracting people data =====
+2025-04-23 20:20:27,926 - INFO - ===== Start Extracting people data =====
+2025-04-23 20:20:28,071 - INFO - ===== Finish Extracting people data =====
+2025-04-24 05:27:36,106 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-24 05:27:36,114 - WARNING - No such comm: 67de1d71-981b-4bc2-9d61-e12ce4505427
+2025-04-25 16:56:22,963 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-25 16:56:22,972 - WARNING - No such comm: 96ceeb39-f613-4f01-843f-d2024b405c65
+2025-04-25 17:46:43,751 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-25 17:46:43,778 - WARNING - No such comm: 9a9cb3db-71a6-44a3-a6b7-d2988f38869a
+2025-04-25 17:46:55,765 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,481 - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2025-04-25 17:47:24,527 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,533 - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2025-04-25 17:47:24,546 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,549 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,550 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,551 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,552 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,553 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,554 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,555 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,556 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,557 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,558 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,559 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,561 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,562 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,563 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,564 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,565 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,566 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,567 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,568 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,569 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,570 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,571 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,572 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,573 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,574 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,576 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,577 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,578 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,579 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,580 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,581 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,582 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,583 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,584 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,585 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,586 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,587 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,588 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,589 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,590 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,591 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,592 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,593 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,594 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,595 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,596 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,597 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,598 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,598 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,599 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,601 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,601 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,602 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,603 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,604 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,605 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,606 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,607 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,608 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,609 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,610 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,611 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,612 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,612 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,613 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,614 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,615 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,616 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,617 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,618 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,619 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,620 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,621 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,622 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,623 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,624 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,625 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,626 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,627 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,628 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,628 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,629 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,630 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,630 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,631 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,632 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,632 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,633 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,634 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,635 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,636 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,637 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,638 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,639 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,640 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,641 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,642 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,643 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,644 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,645 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,646 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,647 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,648 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,650 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,651 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,652 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,653 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,655 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,656 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,657 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,658 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,659 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,660 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,661 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,662 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,663 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,664 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,665 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,666 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,667 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,668 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,670 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,671 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,672 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,673 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,673 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,675 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,676 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,677 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,678 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,679 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,680 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,681 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,682 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,683 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,684 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,685 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,686 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,687 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,688 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,689 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,690 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,691 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,692 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,693 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,694 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,695 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,696 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,697 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,699 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,700 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,701 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,702 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,703 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,704 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,705 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,706 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,706 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,708 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,708 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,709 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,710 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,711 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,712 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,713 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,714 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,715 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,716 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,718 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,719 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,720 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,721 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,722 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,723 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,724 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,725 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,726 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,728 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,729 - INFO - Closing down clientserver connection
+2025-04-25 17:47:24,730 - INFO - Closing down clientserver connection
+2025-04-25 17:47:34,352 - INFO - ===== Start Banking Data Pipeline =====
+2025-04-25 17:47:34,383 - INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+2025-04-25 17:47:34,386 - INFO - Closing down clientserver connection
+2025-04-25 17:47:34,388 - ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 516, in send_command
+    raise Py4JNetworkError("Answer from Java side is empty")
+py4j.protocol.Py4JNetworkError: Answer from Java side is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2025-04-25 17:47:34,389 - INFO - Closing down clientserver connection
+2025-04-25 17:47:34,391 - ERROR - ===== Data Pipeline Failed =====
+2025-04-25 17:47:34,392 - ERROR - SparkSession$ does not exist in the JVM
+2025-04-25 17:47:35,741 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,743 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,744 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,745 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,747 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,747 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,748 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,750 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,751 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,752 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,753 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,753 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,754 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,755 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,756 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,757 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,758 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,759 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,760 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,761 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,762 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,763 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,764 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,765 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,766 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,767 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,768 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,770 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,771 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,772 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,773 - INFO - Closing down clientserver connection
+2025-04-25 17:47:35,774 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,509 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,521 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,533 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,544 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,555 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,566 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,582 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,593 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,610 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,616 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,633 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,645 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,657 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,663 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,674 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,685 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,697 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,703 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,721 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,727 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,744 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,755 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,771 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,783 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,800 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,811 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,817 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,828 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,838 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,840 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,840 - INFO - Closing down clientserver connection
+2025-04-25 17:48:10,841 - INFO - Closing down clientserver connection
+2025-04-25 18:21:56,404 - INFO - Closing down clientserver connection
+2025-04-25 18:21:56,873 - INFO - Closing down clientserver connection
+2025-04-25 18:22:08,423 - INFO - Closing down clientserver connection
+2025-04-25 18:22:52,008 - INFO - Closing down clientserver connection
+2025-04-25 18:24:00,660 - INFO - Closing down clientserver connection
+2025-04-25 18:26:23,675 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-25 18:26:23,680 - WARNING - No such comm: f155caf6-3c26-4bbf-a283-d33a83c9aa85
+2025-04-25 18:26:38,578 - INFO - ===== Start Banking Data Pipeline =====
+2025-04-25 18:26:38,580 - INFO - Closing down clientserver connection
+2025-04-25 18:26:38,582 - ERROR - ===== Data Pipeline Failed =====
+2025-04-25 18:26:38,582 - ERROR - [Errno 111] Connection refused
+2025-04-25 18:26:46,206 - INFO - Closing down clientserver connection
+2025-04-25 18:27:52,355 - INFO - Closing down clientserver connection

@@ -1,3 +1,4 @@
+import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, isnan, when, count
 from utils.helper import init_spark_session
@@ -13,7 +14,7 @@ def profile_spark(df: pd.DataFrame) -> dict:
     for col_name in df.columns:
         data_type = str(df.schema[col_name].dataType)
         
-        # Hitung missing value (null atau kosong)
+        # Count missing value (null or blank)
         missing_count = df.filter(col(col_name).isNull() | (col(col_name) == "")).count()
         missing_percentage = (missing_count / total_rows) * 100 if total_rows > 0 else 0
 
@@ -22,11 +23,11 @@ def profile_spark(df: pd.DataFrame) -> dict:
             "percentage_missing_value": round(missing_percentage, 2)
         }
 
-        # Hitung nilai unik (jika tidak terlalu banyak)
+        # Count unique values (< 5)
         unique_values = df.select(col_name).distinct().limit(5).rdd.flatMap(lambda x: x).collect()
         entry["unique_value"] = unique_values
 
-        # Deteksi valid date
+        # valid date detection
         if "date" in col_name.lower() or "at" in col_name.lower():
             try:
                 valid_dates = df.withColumn("parsed", col(col_name).cast("timestamp"))
@@ -40,6 +41,8 @@ def profile_spark(df: pd.DataFrame) -> dict:
     profile_result = {
         "person_in_charge": "Hudiya Resa",
         "created_at": datetime.now().strftime("%Y-%m-%d"),
+        "total_rows": df.count(),
+        "total_cols": len(df.columns),
         "report": report
     }
 

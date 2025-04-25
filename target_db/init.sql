@@ -127,3 +127,98 @@ CREATE TABLE public.relationships (
 
 
 CREATE DATABASE etl_log;
+
+
+
+CREATE DATABASE warehouse;
+
+CREATE TABLE fact_company_growth (
+    company_growth_id SERIAL PRIMARY KEY,
+    company_nk VARCHAR(255),
+    date_id INT,
+    acquisition_count INT,
+    total_funding_usd NUMERIC(15,2),
+    ipo_valuation_usd NUMERIC(15,2),
+    ipo_raised_amount_usd NUMERIC(15,2)
+);
+
+CREATE TABLE fact_investments (
+    investment_id SERIAL PRIMARY KEY,
+    investment_nk VARCHAR(255),
+    investor_id INT,
+    funding_round_id INT,
+    company_id INT,
+    date_id INT,
+    investment_amount_usd NUMERIC(15,2)
+);
+
+CREATE TABLE dim_company (
+    company_id SERIAL PRIMARY KEY,
+    company_nk VARCHAR(255),
+    region VARCHAR(255),
+    city VARCHAR(255),
+    country_code VARCHAR(10),
+    latitude NUMERIC(9,6),
+    longitude NUMERIC(9,6)
+);
+
+CREATE TABLE dim_investor (
+    investor_id SERIAL PRIMARY KEY,
+    investor_nk VARCHAR(255),
+    investor_name VARCHAR(255)
+);
+
+CREATE TABLE dim_funding_round (
+    funding_round_id SERIAL PRIMARY KEY,
+    funding_round_nk VARCHAR(255),
+    funding_type VARCHAR(255),
+    funding_code VARCHAR(255),
+    is_first_round BOOLEAN,
+    is_last_round BOOLEAN
+);
+
+CREATE TABLE dim_people (
+    people_nk VARCHAR PRIMARY KEY,
+    first_name VARCHAR,
+    last_name VARCHAR,
+    birthplace VARCHAR
+);
+
+CREATE TABLE dim_relationship (
+    relationship_nk VARCHAR PRIMARY KEY,
+    people_nk VARCHAR,
+    related_company_nk VARCHAR,
+    start_date DATE,
+    end_date DATE,
+    is_past BOOLEAN,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+);
+
+CREATE TABLE dim_date (
+    date_id INT PRIMARY KEY,
+    date_actual DATE,
+    day_suffix VARCHAR(4),
+    day_name VARCHAR(10),
+    day_of_year INT,
+    week_of_month INT,
+    week_of_year INT,
+    week_of_year_iso VARCHAR(10),
+    month_actual INT,
+    month_name VARCHAR(15),
+    month_name_abbreviated VARCHAR(5),
+    quarter_actual INT,
+    quarter_name VARCHAR(10),
+    year_actual INT,
+    first_day_of_week DATE,
+    last_day_of_week DATE,
+    first_day_of_month DATE,
+    last_day_of_month DATE,
+    first_day_of_quarter DATE,
+    last_day_of_quarter DATE,
+    first_day_of_year DATE,
+    last_day_of_year DATE,
+    mmyyyy VARCHAR(10),
+    mmddyyyy VARCHAR(20),
+    weekend_indr VARCHAR(10)
+);

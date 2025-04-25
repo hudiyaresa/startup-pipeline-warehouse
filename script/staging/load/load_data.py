@@ -33,7 +33,7 @@ def load_data(df_result: pyspark.sql.DataFrame, table_name: str) -> None:
     }
 
     try:
-        logging.info("===== Start Load data to the database =====")
+        logging.info(f"===== Start Load {table_name} to the database =====")
 
         # TRUNCATE TABLE using SQLAlchemy
         engine = create_engine(sqlalchemy_url)
@@ -49,20 +49,20 @@ def load_data(df_result: pyspark.sql.DataFrame, table_name: str) -> None:
             properties=connection_properties,
         )
 
-        logging.info("===== Finish Load data to the database =====")
+        logging.info(f"===== Finish Load {table_name} to the database =====")
 
         # SUCCESS log
         log_message = spark.sparkContext.parallelize([(
-            "targets", "load", "success", "db", table_name, current_timestamp
+            "staging", "load", "success", "db", table_name, current_timestamp
         )]).toDF(["step", "process", "status", "source", "table_name", "etl_date"])
 
     except Exception as e:
-        logging.error("===== Failed Load data to the database =====")
+        logging.error(f"===== Failed Load d{table_name}ata to the database =====")
         logging.error(str(e))
 
         # FAILURE log
         log_message = spark.sparkContext.parallelize([(
-            "targets", "load", "failed", "db", table_name, current_timestamp, str(e)
+            "staging", "load", "failed", "db", table_name, current_timestamp, str(e)
         )]).toDF(["step", "process", "status", "source", "table_name", "etl_date", "error_msg"])
 
         raise

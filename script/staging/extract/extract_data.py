@@ -54,7 +54,7 @@ def extract_data(data_name: str, format_data: str) -> pyspark.sql.DataFrame:
 
         # Log failure
         log_message = spark.sparkContext.parallelize([(
-            "sources", "extraction", "failed", format_data, data_name, current_timestamp, str(e)
+            "sources", "extract", "failed", format_data, data_name, current_timestamp, str(e)
         )]).toDF(["step", "process", "status", "source", "table_name", "etl_date", "error_msg"])
 
         raise

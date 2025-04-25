@@ -1,4 +1,3 @@
-
 # Startup Investment Data Pipeline
 
 ---
@@ -11,7 +10,10 @@
 - [Data Profiling](#data-profiling)
 - [Pipeline Design](#pipeline-design)
 - [Layers](#layers)
-- [Target Database Design](#target-database-design)
+- [Design Dimensional Model Process](#design-dimensional-model-process)
+  - [ERD Diagram](#erd-diagram)
+  - [Business Processes and Details](#business-processes-and-details)
+  - [Business Process and Performance Metric Table](#business-process-and-performance-metric-table)
 - [Source to Target Mapping](#source-to-target-mapping)
 - [ETL Implementation](#etl-implementation)
 - [Validation System and Logging](#validation-system-and-logging)
@@ -20,12 +22,12 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Expected Output](#expected-output)
+- [Documentation](#documentation)
 
 ---
 
 ## Project Description
-The **Startup Investment Data Pipeline** aims to create a unified and scalable system to integrate startup ecosystem data collected from multiple sources: databases, semi-structured files, and APIs.  
-This solution enables dynamic insights into market trends, company growth, investment patterns, and leadership profiles within startups.
+The **Startup Investment Data Pipeline** aims to create a unified and scalable system to integrate startup ecosystem data collected from multiple sources: databases, semi-structured files, and APIs. This solution enables dynamic insights into market trends, company growth, investment patterns, and leadership profiles within startups.
 
 ---
 
@@ -84,23 +86,65 @@ The pipeline architecture is divided into:
 
 ---
 
-## Target Database Design
-The target database follows a **Dimensional Model (Star Schema)** design for analytical efficiency:
-
-### Fact Tables
-- **Fact Company Growth** (funding, IPO, acquisition values)
-- **Fact Investments** (investment amounts, investors, funding rounds)
-
-### Dimension Tables
-- Company
-- Funding Round
-- IPO
-- Acquisition
-- Investor
-- Date
+## Design Dimensional Model Process
 
 ### ERD Diagram
-(Attach an image if available here)
+![ERD Warehouse](docs/erd_wh_investment.png)
+
+The dimensional model is designed to enable efficient querying and reporting by organizing data into facts and dimensions. The main components include:
+
+- **Fact Tables**: `fact_company_growth`, `fact_investments`
+- **Dimension Tables**: `dim_company`, `dim_investor`, `dim_funding_round`, `dim_date`
+
+| **Fact Table / Dimension**  | **dim_company** | **dim_investor** | **dim_funding_round** | **dim_date** |
+|-----------------------------|-----------------|------------------|-----------------------|--------------|
+| **fact_company_growth**      | X               |                  |                       | X            |
+| **fact_investments**         | X               | X                | X                     | X            |
+
+---
+
+## Business Processes and Details
+
+### Business Process: Company Growth
+
+- **Declare Grain**:
+  - Each record in the fact table will represent the company growth metrics (acquisitions, funding, IPO) at a specific date for a particular company.
+  - This table will aggregate the growth information by company and date.
+
+- **Identify the Dimensions**:
+  - `dim_company`
+  - `dim_date`
+
+- **Identify the Facts**:
+  - `fact_company_growth` (Transactional Fact Table Type)
+  - Measures: `acquisition_count`, `total_funding_usd`, `ipo_valuation_usd`, `ipo_raised_amount_usd`
+
+---
+
+### Business Process: Investment Transactions
+
+- **Declare Grain**:
+  - Each record in the fact table will represent an investment event by an investor in a company during a funding round on a specific date.
+  - This table aggregates investment data by investor, company, funding round, and date.
+
+- **Identify the Dimensions**:
+  - `dim_investor`
+  - `dim_company`
+  - `dim_funding_round`
+  - `dim_date`
+
+- **Identify the Facts**:
+  - `fact_investments` (Transactional Fact Table Type)
+  - Measures: `investment_amount_usd`
+
+---
+
+### Business Process and Performance Metric Table
+
+| **Business Process**         | **Performance Metric**                                   |
+|------------------------------|----------------------------------------------------------|
+| **Company Growth**            | Acquisition count, total funding amount, IPO valuation, IPO raised amount |
+| **Investment Transaction**    | Investment amount in USD                                 |
 
 ---
 
@@ -137,14 +181,15 @@ Tools used for ETL implementation:
 ---
 
 ## Technology Stack
-| Category          | Tools / Technologies                          |
-| ----------------- | ---------------------------------------------- |
-| Programming       | Python, Pandas, PySpark (optional)             |
-| Data Storage      | PostgreSQL, MinIO (optional for object storage)|
-| Workflow Orchestration | Docker Compose, (Future: Airflow, Cron)   |
-| API Integration   | Python Requests Library                       |
-| Monitoring        | Custom Logging                                |
-| Containerization  | Docker                                         |
+
+| Category                | Tools / Technologies                                    |
+|-------------------------|---------------------------------------------------------|
+| Programming             | Python, Pandas, PySpark (optional)                      |
+| Data Storage            | PostgreSQL, MinIO (optional for object storage)         |
+| Workflow Orchestration  | Docker Compose, (Future: Airflow, Cron)                 |
+| API Integration         | Python Requests Library                                 |
+| Monitoring              | Custom Logging                                          |
+| Containerization        | Docker                                                  |
 
 ---
 
@@ -208,15 +253,12 @@ Tools used for ETL implementation:
 
 | Step              | Expected Result                               |
 | ----------------- | --------------------------------------------- |
-| Data Extraction    | Source data available in staging             |
+| Data Extraction   | Source data available in staging             |
 | Data Transformation | Cleaned and relational data loaded          |
-| Data Loading       | Warehouse tables populated                   |
-| Validation         | Log file and validation report generated     |
+| Data Loading      | Warehouse tables populated                   |
+| Validation        | Log file and validation report generated     |
 
 ---
-
 
 # Documentations
-
-
----
+```
