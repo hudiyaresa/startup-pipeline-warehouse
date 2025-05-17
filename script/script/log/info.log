@@ -2829,3 +2829,889 @@ py4j.protocol.Py4JNetworkError: Error while sending or receiving
 2025-04-28 20:14:14,747 - INFO - ===== Finish Extracting dim_date data =====
 2025-04-29 12:38:51,821 - ERROR - No such comm target registered: jupyter.widget.control
 2025-04-29 12:38:51,835 - WARNING - No such comm: ff170249-bff5-4d6d-86e0-e5858d7a16dd
+2025-05-17 18:47:25,952 - INFO - ===== Start Banking Data Pipeline =====
+2025-05-17 18:47:30,023 - INFO - ===== Start Extracting people data =====
+2025-05-17 18:47:32,863 - INFO - ===== Finish Extracting people data =====
+2025-05-17 18:47:33,183 - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-05-17 18:47:33,184 - INFO - NumExpr defaulting to 8 threads.
+2025-05-17 18:47:35,651 - INFO - ===== Start Extracting relationships data =====
+2025-05-17 18:47:35,996 - INFO - ===== Finish Extracting relationships data =====
+2025-05-17 18:47:36,809 - INFO - ===== Start Extracting acquisition data =====
+2025-05-17 18:47:36,865 - INFO - ===== Finish Extracting acquisition data =====
+2025-05-17 18:47:37,635 - INFO - ===== Start Extracting funds data =====
+2025-05-17 18:47:37,665 - INFO - ===== Finish Extracting funds data =====
+2025-05-17 18:47:38,357 - INFO - ===== Start Extracting funding_rounds data =====
+2025-05-17 18:47:38,380 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-05-17 18:47:38,979 - INFO - ===== Start Extracting company data =====
+2025-05-17 18:47:38,997 - INFO - ===== Finish Extracting company data =====
+2025-05-17 18:47:39,637 - INFO - ===== Start Extracting investments data =====
+2025-05-17 18:47:39,653 - INFO - ===== Finish Extracting investments data =====
+2025-05-17 18:47:40,309 - INFO - ===== Start Extracting ipos data =====
+2025-05-17 18:47:40,328 - INFO - ===== Finish Extracting ipos data =====
+2025-05-17 18:47:40,960 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:41,096 - INFO - ===== Truncated table people successfully =====
+2025-05-17 18:47:42,502 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:43,081 - INFO - ETL log inserted successfully
+2025-05-17 18:47:43,085 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:43,094 - INFO - ===== Truncated table relationships successfully =====
+2025-05-17 18:47:43,927 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:44,544 - INFO - ETL log inserted successfully
+2025-05-17 18:47:44,548 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:44,560 - INFO - ===== Truncated table acquisition successfully =====
+2025-05-17 18:47:44,937 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:45,511 - INFO - ETL log inserted successfully
+2025-05-17 18:47:45,515 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:45,524 - INFO - ===== Truncated table funds successfully =====
+2025-05-17 18:47:45,706 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:46,322 - INFO - ETL log inserted successfully
+2025-05-17 18:47:46,324 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:46,331 - INFO - ===== Truncated table funding_rounds successfully =====
+2025-05-17 18:47:47,695 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:48,389 - INFO - ETL log inserted successfully
+2025-05-17 18:47:48,392 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:48,403 - INFO - ===== Truncated table company successfully =====
+2025-05-17 18:47:49,685 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:50,292 - INFO - ETL log inserted successfully
+2025-05-17 18:47:50,296 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:50,374 - INFO - ===== Truncated table investments successfully =====
+2025-05-17 18:47:50,885 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:51,590 - INFO - ETL log inserted successfully
+2025-05-17 18:47:51,594 - INFO - ===== Start Load data to the database =====
+2025-05-17 18:47:51,604 - INFO - ===== Truncated table ipos successfully =====
+2025-05-17 18:47:51,729 - INFO - ===== Finish Load data to the database =====
+2025-05-17 18:47:52,408 - INFO - ETL log inserted successfully
+2025-05-17 18:47:52,408 - INFO - ===== Finish Investment Data Pipeline =====
+2025-05-17 18:56:25,740 - INFO - ===== Start Extracting dim_date data =====
+2025-05-17 18:56:25,997 - INFO - ===== Finish Extracting dim_date data =====
+2025-05-17 19:06:51,473 - INFO - ===== Start Load data to the database =====
+2025-05-17 19:06:51,485 - INFO - ===== Truncated table dim_date successfully =====
+2025-05-17 19:06:52,037 - ERROR - ===== Failed Load data to the database =====
+2025-05-17 19:06:52,085 - ERROR - An error occurred while calling o1072.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 80.0 failed 1 times, most recent failure: Lost task 1.0 in stage 80.0 (TID 426) (pyspark executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO dim_date ("date_id","date_actual","day_suffix","day_name","day_of_year","week_of_month","week_of_year","week_of_year_iso","month_actual","month_name","month_name_abbreviated","quarter_actual","quarter_name","year_actual","first_day_of_week","last_day_of_week","first_day_of_month","last_day_of_month","first_day_of_quarter","last_day_of_quarter","first_day_of_year","last_day_of_year","mmyyyy","mmddyyyy","weekend_indr") VALUES ('20541009','2054-10-09 +00','9th','Friday',282,2,41,'2054-W41  ',10,'October','Oct',4,'Fourth',2054,'2054-10-05 +00','2054-10-11 +00','2054-10-01 +00','2054-10-31 +00','2054-10-01 +00','2054-12-31 +00','2054-01-01 +00','2054-12-31 +00','102054','10092054  ','weekday') was aborted: ERROR: column "date_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 442  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "date_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 442
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+	... 19 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO dim_date ("date_id","date_actual","day_suffix","day_name","day_of_year","week_of_month","week_of_year","week_of_year_iso","month_actual","month_name","month_name_abbreviated","quarter_actual","quarter_name","year_actual","first_day_of_week","last_day_of_week","first_day_of_month","last_day_of_month","first_day_of_quarter","last_day_of_quarter","first_day_of_year","last_day_of_year","mmyyyy","mmddyyyy","weekend_indr") VALUES ('20541009','2054-10-09 +00','9th','Friday',282,2,41,'2054-W41  ',10,'October','Oct',4,'Fourth',2054,'2054-10-05 +00','2054-10-11 +00','2054-10-01 +00','2054-10-31 +00','2054-10-01 +00','2054-12-31 +00','2054-01-01 +00','2054-12-31 +00','102054','10092054  ','weekday') was aborted: ERROR: column "date_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 442  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: column "date_id" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 442
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+	... 19 more
+
+2025-05-17 19:06:52,933 - INFO - ETL log inserted successfully
+2025-05-17 19:08:34,163 - INFO - ===== Start Load data to the database =====
+2025-05-17 19:08:34,185 - INFO - ===== Truncated table dim_date successfully =====
+2025-05-17 19:08:34,544 - ERROR - ===== Failed Load data to the database =====
+2025-05-17 19:08:34,587 - ERROR - An error occurred while calling o1181.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 85.0 failed 1 times, most recent failure: Lost task 1.0 in stage 85.0 (TID 452) (pyspark executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO dim_date ("date_id","date_actual","day_suffix","day_name","day_of_year","week_of_month","week_of_year","week_of_year_iso","month_actual","month_name","month_name_abbreviated","quarter_actual","quarter_name","year_actual","first_day_of_week","last_day_of_week","first_day_of_month","last_day_of_month","first_day_of_quarter","last_day_of_quarter","first_day_of_year","last_day_of_year","mmyyyy","mmddyyyy","weekend_indr") VALUES (NULL,'2054-10-09 +00'::date,'9th','Friday',282,2,41,'2054-W41  ',10,'October','Oct',4,'Fourth',2054,'2054-10-05 +00'::date,'2054-10-11 +00'::date,'2054-10-01 +00'::date,'2054-10-31 +00'::date,'2054-10-01 +00'::date,'2054-12-31 +00'::date,'2054-01-01 +00'::date,'2054-12-31 +00'::date,'102054','10092054  ','weekday') was aborted: ERROR: null value in column "date_id" of relation "dim_date" violates not-null constraint
+  Detail: Failing row contains (null, 2054-10-09, 9th, Friday, 282, 2, 41, 2054-W41  , 10, October, Oct, 4, Fourth, 2054, 2054-10-05, 2054-10-11, 2054-10-01, 2054-10-31, 2054-10-01, 2054-12-31, 2054-01-01, 2054-12-31, 102054, 10092054  , weekday).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "date_id" of relation "dim_date" violates not-null constraint
+  Detail: Failing row contains (null, 2054-10-09, 9th, Friday, 282, 2, 41, 2054-W41  , 10, October, Oct, 4, Fourth, 2054, 2054-10-05, 2054-10-11, 2054-10-01, 2054-10-31, 2054-10-01, 2054-12-31, 2054-01-01, 2054-12-31, 102054, 10092054  , weekday).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO dim_date ("date_id","date_actual","day_suffix","day_name","day_of_year","week_of_month","week_of_year","week_of_year_iso","month_actual","month_name","month_name_abbreviated","quarter_actual","quarter_name","year_actual","first_day_of_week","last_day_of_week","first_day_of_month","last_day_of_month","first_day_of_quarter","last_day_of_quarter","first_day_of_year","last_day_of_year","mmyyyy","mmddyyyy","weekend_indr") VALUES (NULL,'2054-10-09 +00'::date,'9th','Friday',282,2,41,'2054-W41  ',10,'October','Oct',4,'Fourth',2054,'2054-10-05 +00'::date,'2054-10-11 +00'::date,'2054-10-01 +00'::date,'2054-10-31 +00'::date,'2054-10-01 +00'::date,'2054-12-31 +00'::date,'2054-01-01 +00'::date,'2054-12-31 +00'::date,'102054','10092054  ','weekday') was aborted: ERROR: null value in column "date_id" of relation "dim_date" violates not-null constraint
+  Detail: Failing row contains (null, 2054-10-09, 9th, Friday, 282, 2, 41, 2054-W41  , 10, October, Oct, 4, Fourth, 2054, 2054-10-05, 2054-10-11, 2054-10-01, 2054-10-31, 2054-10-01, 2054-12-31, 2054-01-01, 2054-12-31, 102054, 10092054  , weekday).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "date_id" of relation "dim_date" violates not-null constraint
+  Detail: Failing row contains (null, 2054-10-09, 9th, Friday, 282, 2, 41, 2054-W41  , 10, October, Oct, 4, Fourth, 2054, 2054-10-05, 2054-10-11, 2054-10-01, 2054-10-31, 2054-10-01, 2054-12-31, 2054-01-01, 2054-12-31, 102054, 10092054  , weekday).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+2025-05-17 19:08:35,305 - INFO - ETL log inserted successfully
+2025-05-17 19:18:55,796 - INFO - ===== Start Load data to the database =====
+2025-05-17 19:18:55,810 - INFO - ===== Truncated table dim_date successfully =====
+2025-05-17 19:18:56,914 - INFO - ===== Finish Load data to the database =====
+2025-05-17 19:18:57,636 - INFO - ETL log inserted successfully
+2025-05-17 20:00:38,492 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:01:13,870 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:01:13,871 - ERROR - DataFrame.unionByName() takes from 2 to 3 positional arguments but 21 were given
+2025-05-17 20:04:53,917 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:05:22,429 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:05:22,430 - ERROR - DataFrame.unionByName() takes from 2 to 3 positional arguments but 21 were given
+2025-05-17 20:06:54,468 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:07:22,832 - INFO - ===== Finished Extracting data from API =====
+2025-05-17 20:13:33,641 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:14:08,335 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:14:08,341 - ERROR - [DATATYPE_MISMATCH.UNEXPECTED_INPUT_TYPE] Cannot resolve "explode(_corrupt_record)" due to data type mismatch: Parameter 1 requires the ("ARRAY" or "MAP") type, however "_corrupt_record" has the type "STRING".;
+'Project [explode(_corrupt_record#3992) AS milestone_data#4014]
++- LogicalRDD [_corrupt_record#3992], false
+
+2025-05-17 20:18:42,572 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:19:10,626 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:19:10,627 - ERROR - name 'StructType' is not defined
+2025-05-17 20:19:57,400 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:20:25,274 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:20:25,277 - ERROR - [DATATYPE_MISMATCH.UNEXPECTED_INPUT_TYPE] Cannot resolve "explode(milestone_data)" due to data type mismatch: Parameter 1 requires the ("ARRAY" or "MAP") type, however "milestone_data" has the type "STRUCT<created_at: TIMESTAMP, description: STRING, milestone_at: DATE, milestone_code: STRING, object_id: STRING, source_description: STRING, source_url: STRING, updated_at: TIMESTAMP>".;
+'Project [explode(milestone_data#4467) AS milestone#4470]
++- Project [_corrupt_record#4285, from_json(StructField(created_at,TimestampType,false), StructField(description,StringType,true), StructField(milestone_at,DateType,false), StructField(milestone_code,StringType,true), StructField(object_id,StringType,false), StructField(source_description,StringType,true), StructField(source_url,StringType,true), StructField(updated_at,TimestampType,false), _corrupt_record#4285, Some(Etc/UTC)) AS milestone_data#4467]
+   +- Union false, false
+      :- LogicalRDD [_corrupt_record#4285], false
+      :- Project [_corrupt_record#4293]
+      :  +- LogicalRDD [_corrupt_record#4293], false
+      :- Project [_corrupt_record#4301]
+      :  +- LogicalRDD [_corrupt_record#4301], false
+      :- Project [_corrupt_record#4309]
+      :  +- LogicalRDD [_corrupt_record#4309], false
+      :- Project [_corrupt_record#4317]
+      :  +- LogicalRDD [_corrupt_record#4317], false
+      :- Project [_corrupt_record#4325]
+      :  +- LogicalRDD [_corrupt_record#4325], false
+      :- Project [_corrupt_record#4333]
+      :  +- LogicalRDD [_corrupt_record#4333], false
+      :- Project [_corrupt_record#4341]
+      :  +- LogicalRDD [_corrupt_record#4341], false
+      :- Project [_corrupt_record#4349]
+      :  +- LogicalRDD [_corrupt_record#4349], false
+      :- Project [_corrupt_record#4357]
+      :  +- LogicalRDD [_corrupt_record#4357], false
+      :- Project [_corrupt_record#4365]
+      :  +- LogicalRDD [_corrupt_record#4365], false
+      :- Project [_corrupt_record#4373]
+      :  +- LogicalRDD [_corrupt_record#4373], false
+      :- Project [_corrupt_record#4381]
+      :  +- LogicalRDD [_corrupt_record#4381], false
+      :- Project [_corrupt_record#4389]
+      :  +- LogicalRDD [_corrupt_record#4389], false
+      :- Project [_corrupt_record#4397]
+      :  +- LogicalRDD [_corrupt_record#4397], false
+      :- Project [_corrupt_record#4405]
+      :  +- LogicalRDD [_corrupt_record#4405], false
+      :- Project [_corrupt_record#4413]
+      :  +- LogicalRDD [_corrupt_record#4413], false
+      :- Project [_corrupt_record#4421]
+      :  +- LogicalRDD [_corrupt_record#4421], false
+      :- Project [_corrupt_record#4429]
+      :  +- LogicalRDD [_corrupt_record#4429], false
+      :- Project [_corrupt_record#4437]
+      :  +- LogicalRDD [_corrupt_record#4437], false
+      +- Project [_corrupt_record#4445]
+         +- LogicalRDD [_corrupt_record#4445], false
+
+2025-05-17 20:22:14,730 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:22:44,622 - ERROR - ===== Failed to Extract Data from API =====
+2025-05-17 20:22:44,626 - ERROR - [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `milestone`.`created_at` cannot be resolved. Did you mean one of the following? [`_corrupt_record`].;
+'Project [cast('milestone.created_at as timestamp) AS created_at#4697, cast('milestone.description as string) AS description#4698, cast('milestone.milestone_at as date) AS milestone_at#4699, cast('milestone.milestone_code as string) AS milestone_code#4700, cast('milestone.object_id as string) AS object_id#4701, cast('milestone.source_description as string) AS source_description#4702, cast('milestone.source_url as string) AS source_url#4703, cast('milestone.updated_at as timestamp) AS updated_at#4704]
++- Union false, false
+   :- LogicalRDD [_corrupt_record#4515], false
+   :- Project [_corrupt_record#4523]
+   :  +- LogicalRDD [_corrupt_record#4523], false
+   :- Project [_corrupt_record#4531]
+   :  +- LogicalRDD [_corrupt_record#4531], false
+   :- Project [_corrupt_record#4539]
+   :  +- LogicalRDD [_corrupt_record#4539], false
+   :- Project [_corrupt_record#4547]
+   :  +- LogicalRDD [_corrupt_record#4547], false
+   :- Project [_corrupt_record#4555]
+   :  +- LogicalRDD [_corrupt_record#4555], false
+   :- Project [_corrupt_record#4563]
+   :  +- LogicalRDD [_corrupt_record#4563], false
+   :- Project [_corrupt_record#4571]
+   :  +- LogicalRDD [_corrupt_record#4571], false
+   :- Project [_corrupt_record#4579]
+   :  +- LogicalRDD [_corrupt_record#4579], false
+   :- Project [_corrupt_record#4587]
+   :  +- LogicalRDD [_corrupt_record#4587], false
+   :- Project [_corrupt_record#4595]
+   :  +- LogicalRDD [_corrupt_record#4595], false
+   :- Project [_corrupt_record#4603]
+   :  +- LogicalRDD [_corrupt_record#4603], false
+   :- Project [_corrupt_record#4611]
+   :  +- LogicalRDD [_corrupt_record#4611], false
+   :- Project [_corrupt_record#4619]
+   :  +- LogicalRDD [_corrupt_record#4619], false
+   :- Project [_corrupt_record#4627]
+   :  +- LogicalRDD [_corrupt_record#4627], false
+   :- Project [_corrupt_record#4635]
+   :  +- LogicalRDD [_corrupt_record#4635], false
+   :- Project [_corrupt_record#4643]
+   :  +- LogicalRDD [_corrupt_record#4643], false
+   :- Project [_corrupt_record#4651]
+   :  +- LogicalRDD [_corrupt_record#4651], false
+   :- Project [_corrupt_record#4659]
+   :  +- LogicalRDD [_corrupt_record#4659], false
+   :- Project [_corrupt_record#4667]
+   :  +- LogicalRDD [_corrupt_record#4667], false
+   +- Project [_corrupt_record#4675]
+      +- LogicalRDD [_corrupt_record#4675], false
+
+2025-05-17 20:25:41,692 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:26:07,289 - INFO - ===== Finished Extracting data from API =====
+2025-05-17 20:42:47,649 - INFO - ===== Start Load data to the database =====
+2025-05-17 20:42:47,699 - INFO - ===== Truncated table milestones successfully =====
+2025-05-17 20:42:48,606 - ERROR - ===== Failed Load data to the database =====
+2025-05-17 20:42:48,655 - ERROR - An error occurred while calling o5233.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 12 in stage 371.0 failed 1 times, most recent failure: Lost task 12.0 in stage 371.0 (TID 8333) (pyspark executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (2139,'2009-11-11 21:21:36+00','Mike Jetter founds âVisualizing Ideasâ, which later turns into Mindjet','1995-01-01 +00','other','c:11901','NaN','NaN','2009-11-11 23:19:29+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.ResultHandlerDelegate.handleError(ResultHandlerDelegate.java:52)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (2139,'2009-11-11 21:21:36+00','Mike Jetter founds âVisualizing Ideasâ, which later turns into Mindjet','1995-01-01 +00','other','c:11901','NaN','NaN','2009-11-11 23:19:29+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.ResultHandlerDelegate.handleError(ResultHandlerDelegate.java:52)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:574)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:751)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 21 more
+
+2025-05-17 20:42:49,556 - INFO - ETL log inserted successfully
+2025-05-17 20:46:32,795 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:47:04,500 - INFO - ===== Finished Extracting data from API =====
+2025-05-17 20:47:30,704 - INFO - ===== Start Load data to the database =====
+2025-05-17 20:47:30,727 - INFO - ===== Truncated table milestones successfully =====
+2025-05-17 20:47:36,197 - ERROR - ===== Failed Load data to the database =====
+2025-05-17 20:47:36,240 - ERROR - An error occurred while calling o6210.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 385.0 failed 1 times, most recent failure: Lost task 5.0 in stage 385.0 (TID 8907) (pyspark executor driver): java.sql.BatchUpdateException: Batch entry 203 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (2139,'2009-11-11 21:21:36+00','Mike Jetter founds âVisualizing Ideasâ, which later turns into Mindjet','1995-01-01 +00','other','c:11901','NaN','NaN','2009-11-11 23:19:29+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.sql.BatchUpdateException: Batch entry 203 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (2139,'2009-11-11 21:21:36+00','Mike Jetter founds âVisualizing Ideasâ, which later turns into Mindjet','1995-01-01 +00','other','c:11901','NaN','NaN','2009-11-11 23:19:29+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(2139) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+2025-05-17 20:47:37,020 - INFO - ETL log inserted successfully
+2025-05-17 20:47:55,163 - INFO - ===== Start Extracting data from API: https://api-milestones.vercel.app/api/data for the period 1994-01-01 to 2014-01-01 =====
+2025-05-17 20:48:26,654 - INFO - ===== Finished Extracting data from API =====
+2025-05-17 20:50:24,687 - INFO - ===== Start Load data to the database =====
+2025-05-17 20:50:24,707 - INFO - ===== Truncated table milestones successfully =====
+2025-05-17 20:50:30,674 - ERROR - ===== Failed Load data to the database =====
+2025-05-17 20:50:30,721 - ERROR - An error occurred while calling o7189.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 402.0 failed 1 times, most recent failure: Lost task 0.0 in stage 402.0 (TID 9715) (pyspark executor driver): java.sql.BatchUpdateException: Batch entry 372 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (4132,'2010-05-03 16:55:25+00','"Creditanstalt" and the Creditanstalt key, "Credit Trust", "Family Office" are wordwide registered trademarks of Creditanstalt. ','1995-01-01 +00','other','c:35045','US Patent and trademark office, EPO Europe, Handelsregister','http://creditanstalt.ca','2010-05-05 18:48:35+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(4132) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(4132) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2779)
+	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2779)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1242)
+	at scala.Option.foreach(Option.scala:407)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1242)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3048)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2982)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2971)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:984)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1036)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:407)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1034)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:756)
+	at jdk.internal.reflect.GeneratedMethodAccessor77.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.sql.BatchUpdateException: Batch entry 372 INSERT INTO milestones ("milestone_id","created_at","description","milestone_at","milestone_code","object_id","source_description","source_url","updated_at") VALUES (4132,'2010-05-03 16:55:25+00','"Creditanstalt" and the Creditanstalt key, "Credit Trust", "Family Office" are wordwide registered trademarks of Creditanstalt. ','1995-01-01 +00','other','c:35045','US Patent and trademark office, EPO Europe, Handelsregister','http://creditanstalt.ca','2010-05-05 18:48:35+00') was aborted: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(4132) already exists.  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1036)
+	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1036)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "milestones_pkey"
+  Detail: Key (milestone_id)=(4132) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+	... 24 more
+
+2025-05-17 20:50:31,520 - INFO - ETL log inserted successfully
+2025-05-17 20:50:43,308 - INFO - ===== Start Load data to the database =====
+2025-05-17 20:50:43,332 - INFO - ===== Truncated table milestones successfully =====
+2025-05-17 20:50:48,769 - INFO - ===== Finish Load data to the database =====
+2025-05-17 20:50:49,481 - INFO - ETL log inserted successfully

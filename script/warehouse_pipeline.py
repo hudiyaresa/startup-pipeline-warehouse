@@ -13,6 +13,12 @@ if __name__ == "__main__":
 
     def warehouse_pipeline():
         dim_date_df = extract_data("dim_date", "csv")
+        acquisition_df = extract_data("acquisition", "db")
+        funding_rounds_df = extract_data("funding_rounds", "db")
+        ipos_df = extract_data("ipos", "db")
+        company_df = extract_data("company", "db")
+        investments_df = extract_data("investments", "db")
+        milestones_df = extract_data("milestones", "db")
 
         fact_company_growth = transform_fact_company_growth(acquisition_df, funding_rounds_df, ipos_df, company_df, dim_date_df)
         fact_investments = transform_fact_investments(investments_df, funding_rounds_df, dim_date_df)
@@ -21,15 +27,13 @@ if __name__ == "__main__":
         dim_funding_round = transform_dim_funding_round(funding_rounds_df)
         dim_date = transform_dim_date(dim_date_df)
 
-        # Now load these DataFrames to warehouse
+        # Load DataFrames to warehouse
         load_data(dim_date, table_name="dim_date")
-        
-        # fact_company_growth.write.jdbc(url="jdbc:postgresql://host:port/db", table="fact_company_growth", mode="overwrite")
-        # fact_investments.write.jdbc(url="jdbc:postgresql://host:port/db", table="fact_investments", mode="overwrite")
-        # dim_company.write.jdbc(url="jdbc:postgresql://host:port/db", table="dim_company", mode="overwrite")
-        # dim_investor.write.jdbc(url="jdbc:postgresql://host:port/db", table="dim_investor", mode="overwrite")
-        # dim_funding_round.write.jdbc(url="jdbc:postgresql://host:port/db", table="dim_funding_round", mode="overwrite")
-        # dim_date.write.jdbc(url="jdbc:postgresql://host:port/db", table="dim_date", mode="overwrite")
+        load_data(dim_company, table_name="dim_company")
+        load_data(dim_investor, table_name="dim_investor")
+        load_data(dim_funding_round, table_name="dim_funding_round")
+        load_data(fact_investments, table_name="fact_investments")
+        load_data(fact_company_growth, table_name="fact_company_growth")
 
     # Running the warehouse pipeline process
     warehouse_pipeline()
