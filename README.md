@@ -16,7 +16,6 @@
   - [Business Process and Performance Metric Table](#business-process-and-performance-metric-table)
 - [Source to Target Mapping](#source-to-target-mapping)
 - [ETL Implementation](#etl-implementation)
-- [Validation System and Logging](#validation-system-and-logging)
 - [Scheduling](#scheduling)
 - [Technology Stack](#technology-stack)
 - [Installation](#installation)
@@ -168,12 +167,6 @@ Tools used for ETL implementation:
 
 ---
 
-## Validation System and Logging
-- **Validation**: Ensures data consistency and quality before loading into the warehouse.
-- **Logging**: Process status, errors, and anomalies are logged into either a database or filesystem for monitoring.
-
----
-
 ## Scheduling
 (Optional) Future improvements can include scheduling with:
 - **Cron Jobs**
@@ -184,9 +177,8 @@ Tools used for ETL implementation:
 
 | Category                | Tools / Technologies                                    |
 |-------------------------|---------------------------------------------------------|
-| Programming             | Python, Pandas, PySpark (optional)                      |
-| Data Storage            | PostgreSQL, MinIO (optional for object storage)         |
-| Workflow Orchestration  | Docker Compose, (Future: Airflow, Cron)                 |
+| Programming             | Python, Pandas, PySpark                      |
+| Database            | PostgreSQL         |
 | API Integration         | Python Requests Library                                 |
 | Monitoring              | Custom Logging                                          |
 | Containerization        | Docker                                                  |
@@ -233,14 +225,9 @@ Tools used for ETL implementation:
    cd /home/jovyan/work
    ```
 3. Execute script:
-   - Using Pandas:
-     ```bash
-     python your_script.py
-     ```
-   - Using PySpark:
-     ```bash
-     spark-submit your_script.py
-     ```
+   ```bash
+   spark-submit your_script.py
+   ```
 
 ### Option 2: Run via Jupyter Notebook
 
@@ -253,10 +240,10 @@ Tools used for ETL implementation:
 
 | Step              | Expected Result                               |
 | ----------------- | --------------------------------------------- |
+| Data Profiling        | Profiling report generated     |
 | Data Extraction   | Source data available in staging             |
 | Data Transformation | Cleaned and relational data loaded          |
 | Data Loading      | Warehouse tables populated                   |
-| Validation        | Log file and validation report generated     |
 
 ---
 

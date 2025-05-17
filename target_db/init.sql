@@ -125,6 +125,20 @@ CREATE TABLE public.relationships (
     updated_at character varying(255)
 );
 
+-- Staging table for milestones (from api)
+CREATE TABLE public.milestones (
+    milestone_id INT PRIMARY KEY,
+    created_at TIMESTAMP NOT NULL,
+    description TEXT,
+    milestone_at DATE NOT NULL,
+    milestone_code VARCHAR(50),
+    object_id VARCHAR(50) NOT NULL,
+    source_description TEXT,
+    source_url VARCHAR(255),
+    updated_at TIMESTAMP NOT NULL
+);
+
+
 
 CREATE DATABASE etl_log;
 

@@ -16,9 +16,18 @@ if __name__ == "__main__":
         df_company = extract_data(data_name="company", format_data="db")
         df_investments = extract_data(data_name="investments", format_data="db")
         df_ipos = extract_data(data_name="ipos", format_data="db")
+        
+        # Extract API
+        # URL API and date (20 years back)
+        url = "https://api-milestones.vercel.app/api/data"
+        start_date = "1994-01-01"
+        end_date = "2014-01-01"
 
-        # Transform each dataset separately
-        # df_transactions = transform_data(df_transactions, "transactions")
+        # extract API
+        df_milestones = extract_api_per_year(spark, url, start_date, end_date)        
+        
+        # dim_date_df = extract_data("dim_date", "csv") -> di warehouse
+
 
         # Load each transformed dataset into the data warehouse
         load_data(df_people, table_name="people")
@@ -29,6 +38,7 @@ if __name__ == "__main__":
         load_data(df_company, table_name="company")
         load_data(df_investments, table_name="investments")
         load_data(df_ipos, table_name="ipos")
+        load_data(df_milestones, table_name="milestones")
 
         logging.info("===== Finish Investment Data Pipeline =====")
 
@@ -36,3 +46,9 @@ if __name__ == "__main__":
         logging.error("===== Data Pipeline Failed =====")
         logging.error(e)
         raise
+
+
+
+
+        # Transform each dataset separately
+        # df_transactions = transform_data(df_transactions, "transactions")

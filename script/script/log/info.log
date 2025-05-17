@@ -2691,3 +2691,141 @@ py4j.protocol.Py4JNetworkError: Error while sending or receiving
 2025-04-25 18:26:38,582 - ERROR - [Errno 111] Connection refused
 2025-04-25 18:26:46,206 - INFO - Closing down clientserver connection
 2025-04-25 18:27:52,355 - INFO - Closing down clientserver connection
+2025-04-25 18:28:43,999 - INFO - ===== Start Banking Data Pipeline =====
+2025-04-25 18:28:49,842 - INFO - ===== Start Extracting people data =====
+2025-04-25 18:28:53,839 - INFO - ===== Finish Extracting people data =====
+2025-04-25 18:28:54,735 - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-04-25 18:28:54,736 - INFO - NumExpr defaulting to 8 threads.
+2025-04-25 18:28:58,216 - INFO - ===== Start Extracting relationships data =====
+2025-04-25 18:28:58,611 - INFO - ===== Finish Extracting relationships data =====
+2025-04-25 18:28:59,810 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 18:28:59,970 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 18:29:01,685 - INFO - ===== Start Extracting funds data =====
+2025-04-25 18:29:01,769 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 18:29:03,147 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 18:29:03,189 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 18:29:04,126 - INFO - ===== Start Extracting company data =====
+2025-04-25 18:29:04,154 - INFO - ===== Finish Extracting company data =====
+2025-04-25 18:29:04,985 - INFO - ===== Start Extracting investments data =====
+2025-04-25 18:29:05,010 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 18:29:06,039 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 18:29:06,088 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 18:29:07,258 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:07,587 - INFO - ===== Truncated table people successfully =====
+2025-04-25 18:29:10,080 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:11,251 - INFO - ETL log inserted successfully
+2025-04-25 18:29:11,259 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:11,273 - INFO - ===== Truncated table relationships successfully =====
+2025-04-25 18:29:12,635 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:13,415 - INFO - ETL log inserted successfully
+2025-04-25 18:29:13,419 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:13,429 - INFO - ===== Truncated table acquisition successfully =====
+2025-04-25 18:29:14,069 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:14,956 - INFO - ETL log inserted successfully
+2025-04-25 18:29:14,961 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:14,979 - INFO - ===== Truncated table funds successfully =====
+2025-04-25 18:29:15,311 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:16,496 - INFO - ETL log inserted successfully
+2025-04-25 18:29:16,503 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:16,519 - INFO - ===== Truncated table funding_rounds successfully =====
+2025-04-25 18:29:19,219 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:20,054 - INFO - ETL log inserted successfully
+2025-04-25 18:29:20,059 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:20,071 - INFO - ===== Truncated table company successfully =====
+2025-04-25 18:29:22,982 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:23,850 - INFO - ETL log inserted successfully
+2025-04-25 18:29:23,854 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:23,871 - INFO - ===== Truncated table investments successfully =====
+2025-04-25 18:29:25,023 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:25,875 - INFO - ETL log inserted successfully
+2025-04-25 18:29:25,884 - INFO - ===== Start Load data to the database =====
+2025-04-25 18:29:25,897 - INFO - ===== Truncated table ipos successfully =====
+2025-04-25 18:29:26,121 - INFO - ===== Finish Load data to the database =====
+2025-04-25 18:29:27,017 - INFO - ETL log inserted successfully
+2025-04-25 18:29:27,018 - INFO - ===== Finish Investment Data Pipeline =====
+2025-04-25 18:31:07,029 - INFO - ===== Start Extracting people data =====
+2025-04-25 18:31:07,356 - INFO - ===== Finish Extracting people data =====
+2025-04-25 18:43:20,193 - INFO - ===== Start Extracting people data =====
+2025-04-25 18:43:20,537 - INFO - ===== Finish Extracting people data =====
+2025-04-25 18:56:42,501 - INFO - ===== Start Extracting people data =====
+2025-04-25 18:56:42,769 - INFO - ===== Finish Extracting people data =====
+2025-04-25 18:56:43,964 - INFO - ===== Start Extracting relationships data =====
+2025-04-25 18:56:44,300 - INFO - ===== Finish Extracting relationships data =====
+2025-04-25 18:56:45,253 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 18:56:45,277 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 18:56:46,092 - INFO - ===== Start Extracting funds data =====
+2025-04-25 18:56:46,115 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 18:56:46,933 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 18:56:46,960 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 18:56:47,741 - INFO - ===== Start Extracting company data =====
+2025-04-25 18:56:47,759 - INFO - ===== Finish Extracting company data =====
+2025-04-25 18:56:48,474 - INFO - ===== Start Extracting investments data =====
+2025-04-25 18:56:48,491 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 18:56:49,402 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 18:56:49,425 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 18:59:25,511 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 18:59:25,548 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 18:59:26,614 - INFO - ===== Start Extracting funds data =====
+2025-04-25 18:59:26,644 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 18:59:27,608 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 18:59:27,641 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 18:59:28,498 - INFO - ===== Start Extracting company data =====
+2025-04-25 18:59:28,516 - INFO - ===== Finish Extracting company data =====
+2025-04-25 18:59:29,312 - INFO - ===== Start Extracting investments data =====
+2025-04-25 18:59:29,345 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 18:59:30,145 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 18:59:30,168 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 19:00:48,328 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 19:00:48,359 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 19:00:49,334 - INFO - ===== Start Extracting funds data =====
+2025-04-25 19:00:49,350 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 19:00:50,096 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 19:00:50,114 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 19:00:50,824 - INFO - ===== Start Extracting company data =====
+2025-04-25 19:00:50,840 - INFO - ===== Finish Extracting company data =====
+2025-04-25 19:00:51,524 - INFO - ===== Start Extracting investments data =====
+2025-04-25 19:00:51,540 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 19:00:52,260 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 19:00:52,275 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 19:03:24,508 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 19:03:24,539 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 19:03:25,465 - INFO - ===== Start Extracting funds data =====
+2025-04-25 19:03:25,482 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 19:03:26,224 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 19:03:26,240 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 19:03:26,963 - INFO - ===== Start Extracting company data =====
+2025-04-25 19:03:26,981 - INFO - ===== Finish Extracting company data =====
+2025-04-25 19:03:27,659 - INFO - ===== Start Extracting investments data =====
+2025-04-25 19:03:27,674 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 19:03:28,393 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 19:03:28,408 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 19:05:41,066 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 19:05:41,110 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 19:05:42,071 - INFO - ===== Start Extracting funds data =====
+2025-04-25 19:05:42,086 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 19:05:42,843 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 19:05:42,862 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 19:05:43,595 - INFO - ===== Start Extracting company data =====
+2025-04-25 19:05:43,613 - INFO - ===== Finish Extracting company data =====
+2025-04-25 19:05:44,327 - INFO - ===== Start Extracting investments data =====
+2025-04-25 19:05:44,343 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 19:05:45,019 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 19:05:45,034 - INFO - ===== Finish Extracting ipos data =====
+2025-04-25 19:07:56,024 - INFO - ===== Start Extracting acquisition data =====
+2025-04-25 19:07:56,056 - INFO - ===== Finish Extracting acquisition data =====
+2025-04-25 19:07:57,008 - INFO - ===== Start Extracting funds data =====
+2025-04-25 19:07:57,029 - INFO - ===== Finish Extracting funds data =====
+2025-04-25 19:07:57,818 - INFO - ===== Start Extracting funding_rounds data =====
+2025-04-25 19:07:57,835 - INFO - ===== Finish Extracting funding_rounds data =====
+2025-04-25 19:07:58,540 - INFO - ===== Start Extracting company data =====
+2025-04-25 19:07:58,556 - INFO - ===== Finish Extracting company data =====
+2025-04-25 19:07:59,328 - INFO - ===== Start Extracting investments data =====
+2025-04-25 19:07:59,341 - INFO - ===== Finish Extracting investments data =====
+2025-04-25 19:08:00,067 - INFO - ===== Start Extracting ipos data =====
+2025-04-25 19:08:00,081 - INFO - ===== Finish Extracting ipos data =====
+2025-04-28 20:09:30,034 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-28 20:09:30,052 - WARNING - No such comm: 442e2f6e-1c68-4f6d-aece-d8d9e9ce360f
+2025-04-28 20:14:13,301 - INFO - ===== Start Extracting dim_date data =====
+2025-04-28 20:14:14,747 - INFO - ===== Finish Extracting dim_date data =====
+2025-04-29 12:38:51,821 - ERROR - No such comm target registered: jupyter.widget.control
+2025-04-29 12:38:51,835 - WARNING - No such comm: ff170249-bff5-4d6d-86e0-e5858d7a16dd
